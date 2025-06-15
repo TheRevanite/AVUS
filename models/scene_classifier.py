@@ -13,7 +13,7 @@ class SceneClassifier(nn.Module):
         weight_url = "http://places2.csail.mit.edu/models_places365/resnet50_places365.pth.tar"
         weight_path = "resnet50_places365.pth.tar"
         if not os.path.exists(weight_path):
-            print("📥 Downloading Places365 model...")
+            print("Downloading Places365 model...")
             urllib.request.urlretrieve(weight_url, weight_path)
         
         checkpoint = torch.load(weight_path, map_location='cpu')
@@ -34,7 +34,5 @@ class SceneClassifier(nn.Module):
             lines = f.read().decode("utf-8").splitlines()
         
         labels = [line.strip().split(' ')[0][3:] for line in lines if line.strip()]
-        print("✅ Loaded Places365 labels:", len(labels))
-        print("🎯 Sample scene labels:", labels[:5])
 
         return [labels[i] if i < len(labels) else f"Scene {i}" for i in range(num_classes)]

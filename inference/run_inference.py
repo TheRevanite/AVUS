@@ -23,7 +23,7 @@ def run_inference_on_frame(frame, frame_buffer, models, transforms):
 
     rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 
-    # ===== ACTION =====
+
     frame_tensor = transform_action(rgb)
     frame_buffer.add_frame(frame_tensor)
 
@@ -36,14 +36,12 @@ def run_inference_on_frame(frame, frame_buffer, models, transforms):
     else:
         action_label = "Loading..."
 
-    # ===== SCENE =====
     scene_input = transform_scene(rgb).unsqueeze(0)
     with torch.no_grad():
         scene_logits = scene_model(scene_input)
     scene_id = scene_logits.argmax().item()
     scene_label = scene_model.class_names[scene_id]
 
-    # ===== OBJECT DETECTION =====
     detections = object_detector.detect(frame)
 
     return action_label, scene_label, detections

@@ -21,8 +21,5 @@ class ActionRecognitionHead(nn.Module):
             labels = f.read().decode("utf-8").splitlines()
 
         labels = [label.strip() for label in labels if label.strip()]
-        print("✅ Loaded label count:", len(labels))
-        print("🎯 Sample labels:", labels[:5])
 
-        # Pad with "Class i" if labels are missing
         return [labels[i] if i < len(labels) else f"Class {i}" for i in range(num_classes)]
