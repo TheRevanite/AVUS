@@ -49,6 +49,17 @@ AVUS/
 
 ## Getting Started
 
+### Requirements
+
+- Python 3.8+
+- torch
+- torchvision
+- opencv-python
+- streamlit
+- pyyaml
+- ultralytics
+
+
 ### 1. Install Dependencies
 
 ```sh
@@ -57,7 +68,7 @@ pip install -r requirements.txt
 
 ### 2. Prepare Model Weights
 
-- Download `resnet50_places365.pth.tar` and `yolo11n.pt` if not already present.
+- Model weights (`resnet50_places365.pth.tar` and `yolo11n.pt`) will be automatically downloaded upon runtime if not already present.
 - The action and scene models will download labels automatically.
 
 ### 3. Configure
@@ -83,8 +94,10 @@ python main.py
 streamlit run demo/app.py
 ```
 
-## Credits
+## Credits & Acknowledgements
 
-- Action model: Kinetics-400
-- Scene model: Places365
-- Object detection: YOLOv11 (Ultralytics)
+- **Action model:** Kinetics-400
+- **Scene model:** Places365
+- **Object detection model:** YOLOv11 (Ultralytics)
+- **Frameworks/Libraries:** PyTorch, OpenCV
+- **Datasets:** Places365, Kinetics-400
