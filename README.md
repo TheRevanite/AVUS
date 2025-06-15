@@ -62,7 +62,7 @@ streamlit run demo/app.py
 
 - Action model: Kinetics-400
 - Scene model: Places365
-- Object detection: YOLOv8 (Ultralytics)
+- Object detection: YOLOv11 (Ultralytics)
 
 ## License
 
