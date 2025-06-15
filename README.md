@@ -6,20 +6,45 @@ AVUS is a Python-based pipeline for real-time video understanding. It performs a
 
 - **Action Recognition:** Uses a 3D ResNet model trained on Kinetics.
 - **Scene Classification:** Uses ResNet50 trained on Places365.
-- **Object Detection:** Uses YOLOv8 via Ultralytics.
+- **Object Detection:** Uses YOLOv11 via Ultralytics.
 
 ## Project Structure
 
 ```
-main.py
-config.yaml
-requirements.txt
-models/
-inference/
-setup/
-utils/
-demo/
-data/
+AVUS/
+├── main.py
+│
+├── config/
+│   ├── config.py
+│
+├── setup/
+│   ├── model_loader.py
+│   ├── video_loader.py
+│
+├── demo/
+│   ├── app.py
+│
+├── models/
+│   ├── action_model.py 
+│   ├── scene_classifier.py
+│   ├── object_detector.py
+│
+├── inference/
+│   ├── run_inference.py
+│   ├── frame_buffer.py
+│
+├── utils/
+│   ├── helpers.py
+│   ├── video_utils.py
+│
+├── data/
+│
+│── test/
+│
+├── config.yaml
+|
+└── README.md
+
 ```
 
 ## Getting Started
@@ -62,8 +87,4 @@ streamlit run demo/app.py
 
 - Action model: Kinetics-400
 - Scene model: Places365
-- Object detection: YOLOv8 (Ultralytics)
-
-## License
-
-MIT License
+- Object detection: YOLOv11 (Ultralytics)
