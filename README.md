@@ -11,15 +11,38 @@ AVUS is a Python-based pipeline for real-time video understanding. It performs a
 ## Project Structure
 
 ```
-main.py
-config.yaml
-requirements.txt
-models/
-inference/
-setup/
-utils/
-demo/
-data/
+AVUS/
+├── main.py
+│
+├── config/
+│   ├── config.yaml
+│
+├── setup/
+│   ├── model_loader.py
+│   ├── video_loader.py
+│
+├── demo/
+│   ├── app.py
+│
+├── models/
+│   ├── action_model.py 
+│   ├── scene_classifier.py
+│   ├── object_detector.py
+│
+├── inference/
+│   ├── run_inference.py
+│   ├── frame_buffer.py
+│
+├── utils/
+│   ├── helpers.py
+│   ├── video_utils.py
+│
+├── data/
+│
+│── test/
+│
+└── README.md
+
 ```
 
 ## Getting Started
