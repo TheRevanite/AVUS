@@ -1,5 +1,4 @@
-# AVUS: Action, Scene, and Object Understanding from Video
-
+# AVUS: Advanced Vision & Utility Suite
 AVUS is a Python-based pipeline for real-time video understanding. It performs action recognition, scene classification, and object detection on video streams.
 
 ## Features
