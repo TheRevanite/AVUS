@@ -15,7 +15,7 @@ AVUS/
 ├── main.py
 │
 ├── config/
-│   ├── config.yaml
+│   ├── config.py
 │
 ├── setup/
 │   ├── model_loader.py
@@ -41,6 +41,8 @@ AVUS/
 │
 │── test/
 │
+├── config.yaml
+|
 └── README.md
 
 ```
