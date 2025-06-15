@@ -1,0 +1,8 @@
+__pycache__/
+data/*
+test/*
+config.yaml
+resnet50_places365.pth.tar
+yolo11n.pt
+venv/*
+.venv/
