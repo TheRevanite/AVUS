@@ -6,7 +6,7 @@ AVUS is a Python-based pipeline for real-time video understanding. It performs a
 
 - **Action Recognition:** Uses a 3D ResNet model trained on Kinetics.
 - **Scene Classification:** Uses ResNet50 trained on Places365.
-- **Object Detection:** Uses YOLOv8 via Ultralytics.
+- **Object Detection:** Uses YOLOv11 via Ultralytics.
 
 ## Project Structure
 
